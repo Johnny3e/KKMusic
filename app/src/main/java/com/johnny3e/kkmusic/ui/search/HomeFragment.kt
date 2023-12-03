@@ -1,4 +1,4 @@
-package com.johnny3e.kkmusic.ui.home
+package com.johnny3e.kkmusic.ui.search
 
 import android.os.Bundle
 import android.view.LayoutInflater
