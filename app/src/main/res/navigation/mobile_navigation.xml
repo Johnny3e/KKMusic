@@ -3,18 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_search">
+    app:startDestination="@+id/navigation_home">
 
     <fragment
-        android:id="@+id/navigation_search"
-        android:name="com.johnny3e.kkmusic.ui.search.HomeFragment"
-        android:label="@string/title_search"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_home"
+        android:name="com.johnny3e.kkmusic.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_search_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_collection"
         android:name="com.johnny3e.kkmusic.ui.collection.DashboardFragment"
         android:label="@string/title_collection"
         tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.johnny3e.kkmusic.ui.setting.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
 
 </navigation>

@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">KKMusic</string>
-    <string name="title_search">搜尋</string>
+    <string name="title_home">主頁</string>
     <string name="title_collection">收藏</string>
     <string name="client_id">Client Id</string>
     <string name="client_secret">Client secret</string>
+    <string name="logout">登出</string>
 </resources>

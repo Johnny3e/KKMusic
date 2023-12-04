@@ -22,8 +22,8 @@ class KKRepo(
         .map { if (it.isNotEmpty()) LoginStatus.LogIn else LoginStatus.LogOut }
 
 
-    private fun isTokenExpire(): Boolean {
-        TODO()
+    suspend fun logout() {
+        pref.setToken("")
     }
 
     // https://docs-zhtw.kkbox.codes/#overview--oauth-20

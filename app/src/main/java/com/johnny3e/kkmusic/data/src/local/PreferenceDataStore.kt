@@ -22,7 +22,9 @@ class PreferenceDataStore(private val context: Context) {
         private val accessToken = stringPreferencesKey("token")
     }
 
-    suspend fun setToken(tokenStr: String) = context.dataStore.edit { it[accessToken] = tokenStr }
+    suspend fun setToken(tokenStr: String) {
+        context.dataStore.edit { it[accessToken] = tokenStr }
+    }
 
     val token: Flow<String> = context.dataStore.data.map { it[accessToken] ?: "" }.flowOn(Dispatchers.IO)
 
